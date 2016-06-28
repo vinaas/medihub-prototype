@@ -3,7 +3,9 @@
   "description": "",
   "main": "gulpfile.babel.js",
   "dependencies": {
-    "foundation-sites": "^6.2.3"
+    "foundation-sites": "^6.2.3",
+    "select2": "^4.0.3",
+    "chosen": "^1.6.1"
   },
   "license": "ISC",
   "homepage": "https://github.com/nemesisqp/gulp-metalsmith",

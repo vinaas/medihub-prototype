@@ -1,0 +1,7 @@
+.linkGray{
+    color: map-get($foundation-palette, secondary);
+
+    &:hover{
+        color:  map-get($foundation-palette, primary);
+    }
+}

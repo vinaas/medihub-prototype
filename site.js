@@ -63,7 +63,15 @@ site.script = {
         "bower_components/foundation-sites/js/foundation.toggler.js",
         "bower_components/foundation-sites/js/foundation.tooltip.js",
         // thêm các file script của site ở đây
+
+       
+
         // muốn concat đúng thứ tự thì phải define path
+
+        "bower_components/select2/dist/js/select2.min.js",
+        "bower_components/select2/dist/js/i18n/vi.js",
+
+
         `${site.scriptRoot}/!(app).js`, // các file có tên khác 'app.js'
         `${site.scriptRoot}/app.js`
     ]
