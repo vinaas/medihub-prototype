@@ -1,0 +1,18 @@
+{
+  "name": "Medihub",
+  "description": "",
+  "main": "gulpfile.babel.js",
+  "dependencies": {
+    "foundation-sites": "^6.2.3"
+  },
+  "license": "ISC",
+  "homepage": "https://github.com/nemesisqp/gulp-metalsmith",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
