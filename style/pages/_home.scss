@@ -1,3 +1,90 @@
-body{
-    background: $bg-body;
+body {
+  background: $bg-body;
 }
+
+.mainSearch {}
+
+.mainSearch__form {
+  display: flex;
+  font-size: rem-calc(16px);
+  .select2-container--classic {
+    .select2-selection--single {
+
+      border-color: transparent;
+      height: 64px;
+      .select2-selection__rendered {
+        line-height: 64px;
+      }
+      .select2-selection__arrow {
+        height: 64px;
+        width: 25px;
+      }
+    }
+  }
+  .tt-input {
+    height: 64px;
+  }
+}
+
+//SEARCH SUGGEST
+// Styles for the search bar and results list.
+.twitter-typeahead {
+  display: block !important;
+  position: relative;
+  width: 100%;
+  input {
+    margin-bottom: 0
+  }
+}
+
+.tt-menu {
+  background: white;
+  width: 100%;
+  border: 1px solid #ccc;
+  .tt-suggestion:last-child {
+    border-bottom: none;
+  }
+}
+
+.tt-suggestion {
+  @include clearfix;
+  padding: 0.8rem 0.8rem;
+  border-bottom: 1px solid $light-gray;
+  &:hover,
+  &.tt-cursor {
+    background: map-get($foundation-palette, primary);
+    cursor: pointer;
+    color: white;
+    .cat {
+      color: white;
+    }
+  }
+  .name {
+    display: block;
+    margin-bottom: -5px;
+    float: left;
+  }
+  .cat {
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    float: right;
+    text-transform: uppercase;
+    color: $medium-gray;
+  }
+}
+
+.tt-empty {
+  padding: 1rem;
+  &:before {
+    content: ':(';
+    font-weight: bold;
+    font-size: 1rem;
+    color: #999;
+    margin-left: 0rem;
+    margin-right: 0.5rem;
+  }
+}
+
+//end SEARCH SUGGEST

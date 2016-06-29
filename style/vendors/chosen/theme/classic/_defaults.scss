@@ -4,19 +4,19 @@ $remove-width: 20px !default;
 
 $selection-color: #444 !default;
 
-$border-color: #aaa !default;
-$border-radius: 4px !default;
+$border-color: $medium-gray ;
+$border-radius: 3px !default;
 
-$focus-border-color: #5897fb !default;
+$focus-border-color:  map-get($foundation-palette, primary);
 
-$container-height: 28px !default;
+$container-height: 37px;
 
 $selection-bg-top-color: white !default;
 $selection-bg-bottom-color: #eeeeee !default;
 
 $container-placeholder-color: #999 !default;
 
-$container-focus-border-color: blue !default;
+$container-focus-border-color:  map-get($foundation-palette, primary);
 
 $selection-opened-bg-top-color: $selection-bg-bottom-color !default;
 $selection-opened-bg-bottom-color: $selection-bg-top-color !default;
@@ -28,7 +28,7 @@ $dropdown-bg-color: $selection-bg-top-color !default;
 $results-max-height: 200px !default;
 $results-nested-padding: 20px !default;
 
-$results-choice-bg-hover-color: #3875d7 !default;
+$results-choice-bg-hover-color:  map-get($foundation-palette, primary);
 $results-choice-fg-hover-color: white !default;
 
 $results-choice-fg-unselectable-color: grey !default;

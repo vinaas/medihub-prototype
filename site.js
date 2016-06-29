@@ -38,7 +38,6 @@ site.script = {
         // "bower_components/foundation-sites/js/foundation.core.js",
         // "bower_components/foundation-sites/js/foundation.util.*.js",
 
-
         "bower_components/jquery/dist/jquery.js",
         "bower_components/what-input/what-input.js",
         "bower_components/foundation-sites/js/foundation.core.js",
@@ -64,10 +63,8 @@ site.script = {
         "bower_components/foundation-sites/js/foundation.tooltip.js",
         // thêm các file script của site ở đây
 
-       
-
         // muốn concat đúng thứ tự thì phải define path
-
+        "bower_components/typeahead.js/dist/typeahead.jquery.min.js",
         "bower_components/select2/dist/js/select2.min.js",
         "bower_components/select2/dist/js/i18n/vi.js",
 
