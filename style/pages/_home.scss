@@ -21,8 +21,18 @@ body {
       }
     }
   }
-  .tt-input {
+  .tt-input,.tt-hint {
     height: 64px;
+    border-color:transparent;
+    box-shadow: none;
+    
+    transition: none;
+  }
+  .tt-input:focus{
+    border-color: map-get($foundation-palette, primary);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom:none;
   }
 }
 
@@ -40,7 +50,12 @@ body {
 .tt-menu {
   background: white;
   width: 100%;
-  border: 1px solid #ccc;
+  
+  border: 1px solid map-get($foundation-palette, primary);
+  border-top:none;
+   .tt-suggestion:first-child {
+    border-top: 1px solid $light-gray;
+  }
   .tt-suggestion:last-child {
     border-bottom: none;
   }
@@ -49,6 +64,7 @@ body {
 .tt-suggestion {
   @include clearfix;
   padding: 0.8rem 0.8rem;
+  
   border-bottom: 1px solid $light-gray;
   &:hover,
   &.tt-cursor {
