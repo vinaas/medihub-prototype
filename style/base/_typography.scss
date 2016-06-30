@@ -5,3 +5,12 @@
         color:  map-get($foundation-palette, primary);
     }
 }
+.fontLight{
+  font-weight: 300 !important;
+}
+.fontNormal{
+  font-weight: normal !important;
+}
+.fontBold{
+  font-weight: bold !important;
+}

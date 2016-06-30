@@ -7,9 +7,15 @@
   @import "multiple";
 
   .select2-search--dropdown {
+    padding: 10px 5px;
     .select2-search__field {
       border: 1px solid $border-color;
       outline: 0;
+      margin-bottom: 0;
+      box-shadow: none;
+      height: 20px;
+      border-radius: 0;
+      font-size: 12px;
     }
   }
 
@@ -22,15 +28,10 @@
 
   .select2-dropdown {
     background-color: $dropdown-bg-color;
-    border: 1px solid transparent;
   }
 
   .select2-dropdown--above {
     border-bottom: none;
-  }
-
-  .select2-dropdown--below {
-    border-top: none;
   }
 
   .select2-results > .select2-results__options {
@@ -61,5 +62,7 @@
 
   &.select2-container--open .select2-dropdown {
     border-color: $focus-border-color;
+     box-shadow: 0 0 5px #bdbdbd;
+    transition: box-shadow 0.5s ease-in-out;
   }
 }

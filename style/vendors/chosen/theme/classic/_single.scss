@@ -7,14 +7,12 @@
   outline: 0;
 
 
-  &:focus {
-    border: 1px solid $focus-border-color;
-    box-shadow: 0 0 5px #bdbdbd;
-    transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
-  }
+
+
+
 
   .select2-selection__rendered {
-    color:  #757575;
+    color:  $dark-gray;
     line-height: $container-height;
   }
 
@@ -26,7 +24,7 @@
   }
 
   .select2-selection__placeholder {
-    color:#bdbdbd;
+    color: $medium-gray;
   }
 
   .select2-selection__arrow {
@@ -50,7 +48,10 @@
 
 &.select2-container--open {
   .select2-selection--single {
-    border: 1px solid $focus-border-color;
+    background: $light-gray;
+
+    //  box-shadow: 0 0 5px #bdbdbd;
+    // transition: box-shadow 0.5s ease-in-out;
   }
 
   &.select2-container--above {
