@@ -24,7 +24,7 @@ $(function() {
         source: function (query, sync, async) {
             query = query.toLowerCase();
 
-            $.getJSON('../listItem.json', function (data, status) {
+            $.getJSON('listItem.json', function (data, status) {
                 async(data.filter(function (elem, i, arr) {
                     var name = elem.name.toLowerCase();
                     var terms = [name, name.replace('-', '')].concat(elem.tags || []);
