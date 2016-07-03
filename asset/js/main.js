@@ -1,19 +1,49 @@
 $(function() {
-    $('.select-custom-nosearch').select2({
+    $(".select2Normal").select2({
         placeholder: $(this).data('placeholder'),
         minimumResultsForSearch: Infinity,
-         theme: "classic"
+        language: "vi"
+    }).on('select2-open', function() {
+
+        // however much room you determine you need to prevent jumping
+        var requireHeight = 600;
+        var viewportBottom = $(window).scrollTop() + $(window).height();
+
+        // figure out if we need to make changes
+        if (viewportBottom < requireHeight)
+        {
+            // determine how much padding we should add (via marginBottom)
+            var marginBottom = requireHeight - viewportBottom;
+
+            // adding padding so we can scroll down
+            $(".aLwrElmntOrCntntWrppr").css("marginBottom", marginBottom + "px");
+
+           
+        }
+    });
+
+    $(".select2Search").select2({
+        placeholder: $(this).data('placeholder'),
+        language: "vi"
+    })
+});
+
+
+
+
+/*
+$(function() {
+    $('.select-custom-nosearch').select2({
+        placeholder: $(this).data('placeholder'),
+        minimumResultsForSearch: Infinity
     });
 
     $('.select-custom').select2({
-        placeholder: $(this).data('placeholder'),
-         theme: "classic"
+        placeholder: $(this).data('placeholder')
     });
 })
 
-/**
- * This module sets up the search bar.
- */
+
 !function () {
 
     var source = {
@@ -62,4 +92,4 @@ $(function() {
         $('[data-docs-search]').focus();
     }
 
-}();
+}();*/

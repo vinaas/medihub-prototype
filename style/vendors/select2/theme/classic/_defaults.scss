@@ -4,19 +4,19 @@ $remove-width: 20px !default;
 
 $selection-color: #444 !default;
 
-$border-color: #bdbdbd ;
-$border-radius: 0px;
+$border-color: #aaa !default;
+$border-radius: 4px !default;
 
-$focus-border-color:  transparent;
+$focus-border-color: #5897fb !default;
 
-$container-height: 37px;
+$container-height: 28px !default;
 
 $selection-bg-top-color: white !default;
-$selection-bg-bottom-color: $medium-gray;
+$selection-bg-bottom-color: #eeeeee !default;
 
-$container-placeholder-color: $medium-gray;
+$container-placeholder-color: #999 !default;
 
-$container-focus-border-color:  $primary-color;
+$container-focus-border-color: blue !default;
 
 $selection-opened-bg-top-color: $selection-bg-bottom-color !default;
 $selection-opened-bg-bottom-color: $selection-bg-top-color !default;
@@ -28,7 +28,7 @@ $dropdown-bg-color: $selection-bg-top-color !default;
 $results-max-height: 200px !default;
 $results-nested-padding: 20px !default;
 
-$results-choice-bg-hover-color:  $primary-color;
+$results-choice-bg-hover-color: #3875d7 !default;
 $results-choice-fg-hover-color: white !default;
 
 $results-choice-fg-unselectable-color: grey !default;
