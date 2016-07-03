@@ -14,3 +14,16 @@
 .fontBold{
   font-weight: bold !important;
 }
+
+.label-bh{
+  font-size: 11px;
+  text-transform: uppercase;
+  display: inline-block;
+  border: 1px solid $medium-gray;
+
+  padding: 0 3px;
+
+  position: relative;
+  top: -2px;
+  line-height: 1.2;
+}

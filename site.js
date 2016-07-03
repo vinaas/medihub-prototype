@@ -56,7 +56,7 @@ site.script = {
         "bower_components/foundation-sites/js/foundation.responsiveMenu.js",
         "bower_components/foundation-sites/js/foundation.responsiveToggle.js",
         "bower_components/foundation-sites/js/foundation.reveal.js",
-        "bower_components/foundation-sites/js/foundation.slider.js",
+        // "bower_components/foundation-sites/js/foundation.slider.js",
         "bower_components/foundation-sites/js/foundation.sticky.js",
         "bower_components/foundation-sites/js/foundation.tabs.js",
         "bower_components/foundation-sites/js/foundation.toggler.js",
@@ -67,6 +67,7 @@ site.script = {
         // "bower_components/typeahead.js/dist/typeahead.jquery.min.js",
         "bower_components/select2/dist/js/select2.min.js",
         "bower_components/select2/dist/js/i18n/vi.js",
+        "bower_components/ion.rangeSlider/js/ion.rangeSlider.min.js",
 
 
 

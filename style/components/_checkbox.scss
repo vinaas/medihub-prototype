@@ -9,7 +9,7 @@
 }
 
 .checkbox-inline + .checkbox-inline{
-  margin-left: 15px;
+  margin-left: 10px;
 }
 
 
@@ -141,4 +141,35 @@ input[type="checkbox"]:disabled:active + .topcoat-checkbox__checkmark:before {
   border: 1px solid #9daca9;
   background: #e5e9e8;
   box-shadow: inset 0 1px #fff;
+}
+
+
+
+
+.slider{
+  position: relative;
+
+  .left{
+    left: 0;
+  }
+  .right{
+    right: 0;
+  }
+
+  input[type=text]{
+    top: -25px;
+    position: absolute;
+    box-shadow: none;
+    outline: none;
+    width: 30px;
+    font-size: 12px;
+    border: none;
+    padding: 0;
+    margin-bottom: 0;
+    height: 18px;
+    cursor: default;
+    background: transparent;
+  }
+
+
 }
