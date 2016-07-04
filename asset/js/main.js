@@ -12,14 +12,19 @@ $(function() {
 
     $("#range_2").ionRangeSlider({
         type: "double",
-        grid: true,
         min: 0,
         max: 1000,
         from: 50,
         to: 500,
         step: 50,
         postfix: " K",
-        grid: false
+        grid: false,
+        hide_min_max: true,
+        onChange: function (data) {
+            if(data.from == 0){
+                $(".irs-from").html("Miễn phí");
+            }
+        },
     });
 });
 
