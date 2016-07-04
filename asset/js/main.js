@@ -26,6 +26,19 @@ $(function() {
             }
         },
     });
+
+    $('.popup-gallery').each(function() { // the containers for all your galleries
+        $(this).magnificPopup({
+            delegate: 'a', // the selector for gallery item
+            type: 'image',
+            image: {
+                verticalFit: true,
+            },
+            gallery: {
+                enabled:true
+            }
+        });
+    });
 });
 
 
