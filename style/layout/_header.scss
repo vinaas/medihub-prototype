@@ -1,5 +1,5 @@
 #logo {
-  @include retina('/images/logo.png', 3, 186px 33px, center center no-repeat);
+  @include retina('../images/logo.png', 3, 186px 33px, center center no-repeat);
   width: 186px;
   height: 33px;
   display: block;
