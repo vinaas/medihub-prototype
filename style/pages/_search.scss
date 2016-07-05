@@ -5,6 +5,9 @@
     white-space: nowrap;
     padding: 1.4em 1em;
     margin-bottom: 0;
+    i{
+      vertical-align: -14%;
+    }
   }
 
   .select2-container {
@@ -28,7 +31,7 @@
       border-top-left-radius: 3px;
       border-bottom-left-radius: 3px;
     }
-    width: 220px;
+    width: 210px;
   }
 
   .searchForm--2 {
@@ -40,7 +43,7 @@
   }
 
   .searchForm--4 {
-    width: 150px;
+    width: 148px;
     .select2-container .select2-selection--single {
       border-top-right-radius: 3px;
       border-bottom-right-radius: 3px;
@@ -165,155 +168,11 @@
 }
 
 
-.article{
-  background: white;
-  padding: 15px;
-  position: relative;
-  margin-bottom: 10px;
-}
-
-.article--main{
-  display: flex;
-}
-.article--bookmark{
-  position: absolute;
-  right: 15px;
-  top:15px;
-
-  i{
-    font-size: 1.2em;
-    vertical-align: -8%;
-    padding-right: 4px;
-    font-weight: bold;
-  }
-}
-
-.article--meta{
-  display: flex;
-}
-
-.article--column_1{
-
-  flex: 0 0 110px;
-}
-
-.article--column_2{
-  flex: 2;
-}
-
-.article--column_sub{
-  display: flex;
-  justify-content: space-between;
-}
-
-.article--column_sub_1{
-  padding-right: 20px;
-  flex: 2;
-}
-.article--column_sub_2{
-  flex : 0 0 180px;
-}
-
-
-.article--thumbnail{
-  overflow: hidden;
-  width: 100px;
-  height: 100px;
-  border-radius: 5px;
-  text-align: center;
-  background:$light-gray;
-  img{
-    max-width: 100%;
-    max-height: 100%;
-  }
-  margin-bottom: 10px;
-}
-
-.article--heart{
-  a{
-    font-size: rem-calc(13px);
-    color: $secondary-color;
-    &:hover{
-      color: $alert-color;
-    }
-  }
-}
-
-.article--sponsor{
-  font-size: 10px;
-  color: $success-color;
-}
-
-.article--main{
-  font-size: rem-calc(13px);
-  color: $secondary-color;
-}
-
-.article--title{
-  @include header-size(h5);
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.article-service{
-  font-weight: 500;
-  margin-bottom: 3px;
-}
-
-.article-gallery{
-  margin-bottom: 0;
-  line-height: 0;
-  li{
-    margin-right: 3px;
-    a{
-      display: block;
-      height: 35px;
-      width: 35px;
-      background-size: cover;
-      border-radius: 3px;
-    }
-    &:last-child{
-        margin-right: 3px;
-    }
-  }
-}
-
-.article--price{
-  .icon{
-    display: block;
-    float: left;
-  }
-  .meta{
-    margin-left: 20px;
-  }
-}
-
-.article--date{
-  .icon{
-    display: block;
-    float: left;
-  }
-  .meta{
-    margin-left: 20px;
-  }
-}
-
-.article--button{
-  margin-bottom: 0;
-}
-
-.article--position{
-  font-size: rem-calc(12px);
-  text-transform: uppercase;
-  margin-bottom: -3px;
-  font-weight: bold;
-}
-
 
 #map{
   height: 500px;
   border: 5px solid white;
-
+  margin-bottom: $margin-box;
   width: 100%;
 
 }
