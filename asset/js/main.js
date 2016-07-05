@@ -39,6 +39,18 @@ $(function() {
             }
         });
     });
+    
+
+    $( ".popup-gallery a" ).hover(
+
+        function() {
+            var $img = $(this).attr('href');
+            var $popup = $(this).closest(".popup-gallery").next();
+            $popup.css('background-image', 'url(' + $img + ')');
+        }, function() {
+           
+        }
+    );
 
     $('.popup-with-move-anim').magnificPopup({
         type: 'inline',
