@@ -5,6 +5,9 @@
     white-space: nowrap;
     padding: 1.4em 1em;
     margin-bottom: 0;
+    i{
+      vertical-align: -14%;
+    }
   }
 
   .select2-container {
@@ -28,7 +31,7 @@
       border-top-left-radius: 3px;
       border-bottom-left-radius: 3px;
     }
-    width: 220px;
+    width: 210px;
   }
 
   .searchForm--2 {
@@ -40,7 +43,7 @@
   }
 
   .searchForm--4 {
-    width: 150px;
+    width: 148px;
     .select2-container .select2-selection--single {
       border-top-right-radius: 3px;
       border-bottom-right-radius: 3px;
@@ -86,12 +89,13 @@
 }
 
 .searchFilter {
-  padding: 10px 15px;
+
   background: $bg-gray-light;
   width: 100%;
 
   margin: 20px 0;
   .searchForm {
+    padding: 17px 15px;
     margin-left: -5px;
     margin-right: -5px;
     > div {
@@ -118,3 +122,57 @@
 }
 
 
+.searchDetail{
+  padding: 0 5px;
+  border-top: 1px solid $light-gray;
+  font-size: rem-calc(13px);
+  >div{
+    display: inline-block;
+    padding: 15px 8px;
+    border-right: 1px solid $light-gray;
+    margin-left: 0 !important;
+    &:last-child{
+      border-right: 0;
+    }
+  }
+
+  .rangeSlider-container{
+    padding-top:0;
+    padding-bottom: 0;
+    vertical-align: top;
+  }
+
+  .rangeSlider-label{
+    float: left;
+    padding: 15px 15px 15px 0;
+  }
+
+  .rangeSlider{
+    width: 200px;
+    float: left;
+  }
+
+  .searchDetail-title{
+    color: $primary-color;
+    font-weight: bold;
+  }
+}
+
+.searchText{
+  color: $secondary-color;
+
+  span{
+    color: $dark-gray;
+    font-weight: bold;
+  }
+}
+
+
+
+#map{
+  height: 500px;
+  border: 5px solid white;
+  margin-bottom: $margin-box;
+  width: 100%;
+
+}

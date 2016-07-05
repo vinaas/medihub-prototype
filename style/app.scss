@@ -77,6 +77,7 @@
 @import "components/cover";
 @import "components/dropdown";
 @import "components/checkbox";
+@import "components/popup";
 
 
 @import "layout/forms";
@@ -90,8 +91,10 @@
 @import "pages/home";
 @import "pages/contact";
 @import "pages/search";
+@import "pages/detail";
 
 
 @import "vendors/select2/core";
 @import "vendors/ionrangeslider";
+@import "vendors/magnific-popup";
 

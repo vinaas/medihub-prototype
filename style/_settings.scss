@@ -45,6 +45,8 @@
 // 1. Global
 // ---------
 
+$margin-box: 15px;
+
 $global-font-size: 14px;
 $global-width: rem-calc(1000);
 $global-lineheight: 1.5;
@@ -133,7 +135,7 @@ $header-sizes: (
     'h2': 40,
     'h3': 31,
     'h4': 25,
-    'h5': 20,
+    'h5': 18,
     'h6': 14,
   ),
 );
@@ -362,7 +364,7 @@ $input-background: $white;
 $input-background-focus: $white;
 $input-background-disabled: $light-gray;
 $input-border: 1px solid $medium-gray;
-$input-border-focus: 1px solid $dark-gray;
+$input-border-focus: 1px solid $medium-gray;
 $input-shadow: inset 0 1px 2px rgba($black, 0.1);
 $input-shadow-focus: 0 0 5px $medium-gray;
 $input-cursor-disabled: not-allowed;
