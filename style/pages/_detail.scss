@@ -280,6 +280,9 @@
   &.gray{
     background: $bg-gray-light;
   }
+  &.no-pd{
+    padding: 0 0;
+  }
 }
 .porlet-loadmore{
   font-style: italic;

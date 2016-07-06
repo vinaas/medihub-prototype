@@ -1,0 +1,111 @@
+.profile{
+  margin-top: 20px;
+}
+
+.profile-avatar{
+  position: relative;
+  padding: 20px 10px 10px;
+  .article--thumbnail{
+    margin: 0 auto 15px;
+  }
+}
+
+.profile-edit{
+  position: absolute;
+  top: 7px;
+  right: 10px;
+  font-size: rem-calc(20px);
+  color: $light-gray;
+  &:hover{
+    color: $medium-gray;
+  }
+}
+
+.profile-name{
+  color: $primary-color;
+}
+.profile-feature{
+  background: $bg-gray-light;
+  padding: 10px 5px;
+  border-top: 1px solid darken($bg-gray-light,5%);
+  table{
+    margin-bottom: 0;
+  }
+  table tbody{
+    border: none;
+    background: transparent;
+
+    tr{
+      td:first-child{
+        white-space: nowrap;
+        width: 85px;
+        color: $secondary-color;
+        padding-right: 0;
+      }
+
+      td{
+        padding: 5px 10px;
+      }
+    }
+  }
+
+  table tbody tr:nth-child(even){
+    background: none;
+  }
+}
+.bmi{
+  letter-spacing: 1px;
+}
+
+.profile-info{
+  table tbody{
+    border: none;
+    background: transparent;
+
+    tr{
+      td:first-child{
+        white-space: nowrap;
+        width: 112px;
+        color: $secondary-color;
+
+      }
+
+      td{
+        padding: 10px 0;
+      }
+    }
+  }
+
+  table tbody tr:nth-child(even){
+    background: none;
+  }
+}
+
+.profile-save{
+  display: flex;
+  align-items: stretch;
+
+}
+
+.profile-save-item{
+  flex: 0 0 33.333%;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  &:hover{
+    color: $primary-color;
+    .profile-save-list{
+      color: $primary-color;
+    }
+  }
+}
+.profile-save-title{
+  text-transform: uppercase;
+  font-size: rem-calc(16px);
+}
+.profile-save-icon{
+  font-size: rem-calc(50px);
+}
+.profile-save-list{
+  color: $secondary-color;
+}
