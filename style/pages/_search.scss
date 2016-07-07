@@ -23,7 +23,7 @@
   }
 
   .select2-container--open {
-    box-shadow: 0 4px 5px rgba(0, 0, 0, .15);
+    @extend .boxShadow;
   }
 
   .searchForm--1 {
