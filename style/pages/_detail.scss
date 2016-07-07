@@ -235,6 +235,7 @@
 
 .article-lite{
   padding: 10px;
+  position: relative;
   margin-bottom: $margin-box;
   color: $secondary-color;
   background: white;
@@ -244,6 +245,7 @@
   .article--title{
     font-size: rem-calc(15px);
     margin-bottom: 0;
+    @extend .text-ellipsis;
   }
   .article--thumbnail{
     margin-bottom: 0;
@@ -254,10 +256,55 @@
   }
   .article-service{
     font-weight: normal;
+    @extend .text-ellipsis;
+  }
+
+  &:hover{
+    .delete-article{
+      opacity: 1;
+    }
   }
 }
 
 
+
+
+.delete-article{
+  opacity: 0;
+  overflow: visible;
+  cursor: pointer;
+  background: rgba(0,0,0,0.3);
+  border: 0;
+  -webkit-appearance: none;
+  display: block;
+  outline: none;
+  z-index: 2;
+  box-shadow: none;
+  touch-action: manipulation;
+
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-decoration: none;
+  text-align: center;
+  padding: 0;
+  color: $light-gray;
+  font-style: normal;
+  font-size: 20px;
+  font-family: Arial, Baskerville, monospace;
+
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+
+  &:hover{
+    color: white;
+  }
+}
 
 
 

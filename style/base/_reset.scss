@@ -72,3 +72,9 @@
   opacity: 0;
   background: transparent;
 }
+
+.text-ellipsis{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

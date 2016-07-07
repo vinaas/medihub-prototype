@@ -6,8 +6,11 @@
 }
 
 .header{
-    padding: 15px 0;
+    padding: 0;
     background: $white;
+  .row{
+    height: 60px;
+  }
 }
 
 .header__link{
@@ -29,11 +32,17 @@
     width: 170px;
     padding:5px 3px;
     @extend .boxShadow;
-    border: 1px solid $light-gray
+    border: 1px solid $light-gray;
+    transition: all .2s ease-in-out;
+    opacity: 0;
+  }
+
+  .dropdown-pane.is-open{
+    opacity: 1;
   }
 }
 .header__link_drop{
-
+  padding:22px 10px;
 }
 
 .header__link_dropdown {
