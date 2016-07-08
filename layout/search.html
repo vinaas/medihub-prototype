@@ -11,7 +11,9 @@
 
   <div class="small-4 columns">
 
-    <div id="map" class="boxShadow">
+    <div id="mapView"><div class="mapPlaceholder"><span class="fa fa-spin fa-spinner"></span> Loading map...</div></div>
+
+    <!--<div id="map" class="boxShadow">
 
     </div>
 
@@ -29,7 +31,7 @@
 
     <script async defer
             src="https://maps.googleapis.com/maps/api/js?callback=initMap">
-    </script>
+    </script>-->
   </div>
 
 
@@ -58,6 +60,9 @@
 {{#content "scripts"}}
 
 
+<script src="http://maps.googleapis.com/maps/api/js?sensor=true&amp;libraries=geometry&amp;libraries=places" type="text/javascript"></script>
+<script src="js/infobox.js"></script>
+<script src="js/map.js"></script>
 
 
 {{/content}}

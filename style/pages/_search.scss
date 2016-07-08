@@ -169,10 +169,88 @@
 
 
 
-#map{
-  height: 500px;
+#mapView{
+  height: 600px;
   border: 5px solid white;
   margin-bottom: $margin-box;
   width: 100%;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
 
+
+
+.popupMap {
+  padding: 20px 10px 15px;
+  height: 600px;
+}
+.popupMap-col1{
+  float: left;
+  width: 65px;
+
+}
+
+.popupMap-img{
+  overflow: hidden;
+  width: 58px;
+  height: 58px;
+  border-radius: 5px;
+  text-align: center;
+  background:$light-gray;
+  img{
+    max-width: 100%;
+    max-height: 100%;
+  }
+  margin-bottom: 10px;
+}
+
+.popupMap-job{
+  font-size: 10px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.popupMap-title {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 3px;
+}
+.popupMap-address, .popupMap-type {
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 11px;
+  line-height: 11px;
+  text-overflow: ellipsis;
+  margin-bottom: 3px;
+}
+
+.popupMap-close{
+  position: absolute;
+  top: 14px;
+  right: 0;
+}
+
+.popupMap-time{
+  font-size: 10px;
+}
+
+.closeInfo {
+  padding: 5px 10px;
+  color: $medium-gray;
+  &:hover{
+    color: $dark-gray;
+  }
+}
+
+.mapPlaceholder {
+  text-align: center;
+  width: 100%;
+  padding-top: 100px;
+  float: left;
+  overflow: hidden;
 }
