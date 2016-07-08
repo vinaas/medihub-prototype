@@ -79,7 +79,8 @@ $(function() {
     });
 
 
-    $("#mapView").sticky({topSpacing:15, bottomSpacing: 415});
+    $("#mapView").sticky({topSpacing:80, bottomSpacing: 415});
+    $(".searchFilter .searchForm").sticky({topSpacing:0});
 });
 
 

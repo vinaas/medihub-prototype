@@ -95,9 +95,14 @@
 
   margin: 20px 0;
   .searchForm {
-    padding: 17px 15px;
-    margin-left: -5px;
-    margin-right: -5px;
+    padding: 17px 10px;
+    //margin-left: -5px;
+    //margin-right: -5px;
+    background: $bg-gray-light;
+    width: 100%;
+    position: relative;
+    z-index: 99;
+
     > div {
       float: left;
       padding: 0 5px;
@@ -117,13 +122,19 @@
     .searchForm--5 {
       width: 15%;
     }
+  }
+
+  .is-sticky{
+    .searchForm{
+      @extend .boxShadow;
+    }
 
   }
 }
 
 
 .searchDetail{
-  padding: 0 5px;
+  padding: 0 7px;
   border-top: 1px solid $light-gray;
   font-size: rem-calc(13px);
   >div{
@@ -148,19 +159,20 @@
   }
 
   .rangeSlider{
-    width: 200px;
+    width: 210px;
     float: left;
   }
 
   .searchDetail-title{
     color: $primary-color;
     font-weight: bold;
+    @include header-size(h6);
   }
 }
 
 .searchText{
   color: $secondary-color;
-
+  padding: 0 14px;
   span{
     color: $dark-gray;
     font-weight: bold;
