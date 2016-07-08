@@ -173,13 +173,11 @@
 
 
 #mapView{
-  height: 600px;
+  height: 500px;
   border: 5px solid white;
   margin-bottom: $margin-box;
   width: 100%;
-  -webkit-transition: all .2s ease-in-out;
-  -o-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+
 }
 
 

@@ -8,7 +8,8 @@
     "select2": "^4.0.3",
     "magnific-popup": "^1.1.0",
     "mixitup": "^2.1.11",
-    "ionrangeslider": "^2.1.4"
+    "ionrangeslider": "^2.1.4",
+    "jquery-sticky": "^1.0.3"
   },
   "license": "ISC",
   "homepage": "https://github.com/nemesisqp/gulp-metalsmith",

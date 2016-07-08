@@ -70,6 +70,7 @@ site.script = {
         "bower_components/ion.rangeSlider/js/ion.rangeSlider.min.js",
         "bower_components/magnific-popup/dist/jquery.magnific-popup.min.js",
         "bower_components/mixitup/build/jquery.mixitup.min.js",
+        "bower_components/jquery-sticky/jquery.sticky.js",
 
         `${site.scriptRoot}/!(app).js`, // các file có tên khác 'app.js'
         `${site.scriptRoot}/app.js`

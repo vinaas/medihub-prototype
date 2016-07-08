@@ -77,6 +77,9 @@ $(function() {
     $('#profile-mixitup').mixItUp({
         
     });
+
+
+    $("#mapView").sticky({topSpacing:15, bottomSpacing: 415});
 });
 
 
