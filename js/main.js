@@ -72,7 +72,11 @@ $(function() {
     $(".article--button").click(function(e){
         e.preventDefault();
         $(this).closest(".article--meta").next().slideToggle();
-    })
+    });
+
+    $('#profile-mixitup').mixItUp({
+        
+    });
 });
 
 
