@@ -1,8 +1,23 @@
+var swiperBg;
+
+var swiperGallery;
+
+
 $(function() {
 
-    var swiper = new Swiper('.swiper-bg-slider',{
+    swiperBg = new Swiper('.swiper-bg-slider',{
         loop: true,
         autoplay: 2500,
+    });
+
+    swiperGallery = new Swiper('.swiper-gallery-slider', {
+        slidesPerView: 'auto',
+        paginationClickable: true,
+        spaceBetween: 10,
+        preloadImages: false,
+         nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+         lazyLoading: true
     });
 
     $(".select2Normal").select2({
@@ -33,18 +48,18 @@ $(function() {
         },
     });
 
-    $('.popup-gallery').each(function() { // the containers for all your galleries
-        $(this).magnificPopup({
-            delegate: 'a', // the selector for gallery item
-            type: 'image',
-            image: {
-                verticalFit: true,
-            },
-            gallery: {
-                enabled:true
-            }
-        });
-    });
+    // $('.popup-gallery').each(function() { // the containers for all your galleries
+    //     $(this).magnificPopup({
+    //         delegate: 'a', // the selector for gallery item
+    //         type: 'image',
+    //         image: {
+    //             verticalFit: true,
+    //         },
+    //         gallery: {
+    //             enabled:true
+    //         }
+    //     });
+    // });
     
 
     $( ".popup-gallery a" ).hover(
@@ -77,7 +92,22 @@ $(function() {
 
     $(".article--button").click(function(e){
         e.preventDefault();
-        $(this).closest(".article--meta").next().slideToggle();
+        $(this).closest(".article--meta").next().next().slideToggle();
+    });
+
+    $('.popup-gallery').click(function(e){
+        e.preventDefault();
+
+        var index = $( ".popup-gallery" ).index( this );
+        console.log(index);
+        $(this).closest(".article--meta").next().slideToggle(function(){
+            if (swiperGallery != undefined) {
+                    swiperGallery[index].update();
+                }
+        });
+
+        
+
     });
 
     $('#profile-mixitup').mixItUp({
