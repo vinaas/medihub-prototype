@@ -1,4 +1,10 @@
 $(function() {
+
+    var swiper = new Swiper('.swiper-bg-slider',{
+        loop: true,
+        autoplay: 2500,
+    });
+
     $(".select2Normal").select2({
         placeholder: $(this).data('placeholder'),
         minimumResultsForSearch: Infinity,
@@ -81,6 +87,8 @@ $(function() {
 		easing: ''
 	    }
     });
+
+    
 
 
     $("#mapView").sticky({topSpacing:80, bottomSpacing: 415});
