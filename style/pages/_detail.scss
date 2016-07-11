@@ -40,6 +40,13 @@
     .article--bookmark{
       right: 20px;
       top:20px;
+      font-size: 1.2em;
+    }
+
+    .article--heart{
+      a{
+        font-size: 1.1em;
+      }
     }
 
 
@@ -105,6 +112,7 @@
 }
 
 .article--heart{
+  
   a{
     font-size: rem-calc(13px);
     color: $secondary-color;
