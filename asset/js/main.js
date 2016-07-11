@@ -52,7 +52,7 @@ $(function() {
         }
     );
 
-    $('.popup-with-move-anim').magnificPopup({
+    $('.popup-normal').magnificPopup({
         type: 'inline',
 
         fixedContentPos: false,
@@ -65,7 +65,7 @@ $(function() {
 
         midClick: true,
         removalDelay: 300,
-        mainClass: 'my-mfp-slide-bottom'
+        mainClass: 'my-mfp-zoom-in'
     });
 
 
@@ -75,7 +75,11 @@ $(function() {
     });
 
     $('#profile-mixitup').mixItUp({
-        
+        animation: {
+		duration: '',
+		effects: '',
+		easing: ''
+	    }
     });
 
 
