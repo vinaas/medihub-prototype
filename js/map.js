@@ -313,4 +313,19 @@ var map;
     }, 300);
 
 
+
+    $('.haveMap .article').each(function(i) {
+        $(this).on('mouseenter', function() {
+                // google.maps.event.trigger(markers[i], 'click');
+            markers[i].setAnimation(google.maps.Animation.BOUNCE);
+
+        });
+        $(this).on('mouseleave', function() {
+            // infobox.open(null,null);
+            markers[i].setAnimation(null);
+        });
+    });
+
+
+
 })(jQuery);
