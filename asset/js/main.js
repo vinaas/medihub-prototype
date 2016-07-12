@@ -7,8 +7,9 @@ $(function() {
     swiperBg = new Swiper('.swiper-bg-slider',{
         loop: true,
         autoplay: 8000,
-        speed: 700,
-        effect: "fade"
+        speed: 1000,
+        effect: "fade",
+        simulateTouch: false
     });
 
     swiperGallery = new Swiper('.swiper-gallery-slider', {
@@ -21,6 +22,15 @@ $(function() {
         watchSlidesVisibility: true,
          lazyLoading: true
     });
+
+    swiperTxt = new Swiper('.swiper-txt-slider',{
+         loop: true,
+        autoplay: 8000,
+        speed: 1000,
+        effect: "fade",
+        simulateTouch: false
+
+    })
 
     $(".select2Normal").select2({
         placeholder: $(this).data('placeholder'),

@@ -95,3 +95,19 @@ body {
   position: relative;
   
 }
+.mainSearch__title{
+  opacity: 0
+}
+
+.swiper-txt-slider{
+  .swiper-slide{
+    text-align: center;
+    font-size: inherit;
+    background:transparent;
+  }
+  .swiper-slide-active{
+    .mainSearch__title{
+      opacity: 1;
+    }
+  }
+}
