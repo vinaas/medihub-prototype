@@ -3,7 +3,7 @@ body {
 }
 
 .mainSearch {
-  padding: 160px 0 120px;
+  padding: 15% 0 10%;
   background:  #527e2c ;
   background-size: 100% auto;
   position: relative;
@@ -62,13 +62,23 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    &:after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(82,126,44,0.3);
+    // background: rgba(0,0,0,0.5);
+  }
   }
 }
 
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #000;
+  background: $light-gray;
   /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -83,14 +93,5 @@ body {
   -webkit-align-items: center;
   align-items: center;
   position: relative;
-  &:after{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background: rgba(82,126,44,0.3);
-    // background: rgba(0,0,0,0.5);
-  }
+  
 }
