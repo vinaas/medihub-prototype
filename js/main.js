@@ -6,7 +6,9 @@ $(function() {
 
     swiperBg = new Swiper('.swiper-bg-slider',{
         loop: true,
-        autoplay: 2500,
+        autoplay: 8000,
+        speed: 700,
+        effect: "fade"
     });
 
     swiperGallery = new Swiper('.swiper-gallery-slider', {
@@ -121,7 +123,6 @@ $(function() {
 	    }
     });
 
-    
 
 
     $("#mapView").sticky({topSpacing:80, bottomSpacing: 415});
