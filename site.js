@@ -15,16 +15,12 @@ const site = {
     // ở chế độ production cũng sẽ không minify
     assetRoot: './asset',
 
-    // global metadata của site
-    metadata: {
-        site: {
-            title: 'Medihub website',
-            description: 'description of this site',
-            keywords: 'easy web, thiết kế web đơn giản,',
-            author: 'vinaas ltd.,co',
-            url: ''
-        }
-    }
+//thư mục chứa tất các các file json chứa dữ liệu dùng chung, không định nghĩa được trong file .md
+//gồm 3 file json chính
+ //global.json chứa thông tin chung về website
+ //menu.json chứa thông tin về menu của website
+//footer.json chứa thông tin về footer của website
+    metadataRoot : './content/metadata'
 };
 
 site.script = {
@@ -90,12 +86,16 @@ site.style = {
         ]
     },
     autoprefixer: {
-        browsers: ['last 2 versions', 'IE >= 9']
+        browsers: ['last 2 version', '> 1%' ,'ios 7']
     }
 };
 
 // define và config các plugin của metalsmith
 site.metalsmith = {
+    'metalsmith-metadata-directory': {
+      'directory': `${site.metadataRoot}/**/*.json`
+    },
+
     'metalsmith-drafts':        {
         '_enable': false
     },
@@ -136,29 +136,39 @@ site.metalsmith = {
         '_enable': true,
         'collections.blog':    {
             'perPage':   1,
-            'layout':    'blog.html',
-            'first':     'blog-paging/index.html',
-            'path':      'blog-paging/:num/index.html',
+            'layout':    'blog-list.html',
+            'first':     'blog/index.html',
+            'path':      'blog/:num/index.html',
             'noPageOne': true,
             'pageMetadata': {
               'title': 'Title of metalsmith-pagination file site.js'
             }
         },
-
+        // // test filter
+        // 'collections.baiviet': {
+        //     'perPage':   1,
+        //     'layout':    'blog.html',
+        //     'first':     'baiviet/index.html',
+        //     'path':      'baiviet/:num/index.html',
+        //     'filter':    meta => {
+        //         return meta.dacbiet === false;
+        //     },
+        //     'noPageOne': true
+        // }
     },
 
     'metalsmith-permalinks':    {
         '_enable':  true,
         // default config
-        'pattern':  ':title',
+        'pattern':  ':slug',
         'relative': false,
         // config rieng cho 1 collection
         linksets:   [{
             match:   {collection: 'blog'},
-            pattern: 'blog/:title'
+            pattern: 'blog/:slug'
         }]
     },
-    
+
     'metalsmith-layouts':       {
         '_enable':   true,
         'engine':    'handlebars',
@@ -173,5 +183,4 @@ site.metalsmith = {
         'removeRedundantAttributes': false
     }
 };
-
 module.exports = site;

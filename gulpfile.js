@@ -3,11 +3,23 @@
 const PROD = !!(require('yargs').argv.production);
 let site = require('./site');
 const gulp = require('gulp');
-const $ = require('gulp-load-plugins')({camelize: true});
 const browser = require('browser-sync');
 const Metalsmith = require('metalsmith');
 const Handlebars = require('handlebars');
 require('./handlebars-helper')(Handlebars);
+
+// load metalsmith plugin
+const $ = {
+    plumber:      require('gulp-plumber'),
+    sourcemaps:   require('gulp-sourcemaps'),
+    sass:         require('gulp-sass'),
+    uglify:       require('gulp-uglify'),
+    cssnano:      require('gulp-cssnano'),
+    autoprefixer: require('gulp-autoprefixer'),
+    inlineSource: require('gulp-inline-source'),
+    babel:        require('gulp-babel'),
+    concat:       require('gulp-concat')
+};
 
 const MetalSmithProductionPlugins = [
     'metalsmith-html-minifier'
@@ -66,6 +78,7 @@ function metalsmith(done) {
     });
 }
 
+
 /**
  * build site's sass file, xử lý autoprefixer
  * tạo source map nếu ở chế độ debug
@@ -81,12 +94,12 @@ function sass() {
         let sassConfig = Object.assign({}, site.style.sass);
         sassConfig.outputStyle = 'expanded';
         task = task.pipe($.sass(sassConfig).on('error', $.sass.logError));
+        if (site.style.autoprefixer)
+            task = task.pipe($.autoprefixer(site.style.autoprefixer));
     }
 
     if (PROD) {
-        if (site.style.autoprefixer)
-            task = task.pipe($.autoprefixer(site.style.autoprefixer));
-        task = task.pipe($.cssnano({safe: true}));
+        task = task.pipe($.cssnano({autoprefixer: false}));
     } else {
         task = task.pipe($.sourcemaps.write());
     }
@@ -126,6 +139,7 @@ function script() {
     return task.pipe(gulp.dest(`${site.buildRoot}/js`));
 }
 
+
 /**
  * Inline css, js task
  */
@@ -155,12 +169,24 @@ function asset() {
 
 // tạo local server host nội dung của ${site.buildRoot}
 function server(done) {
+    console.trace('init browserSync');
     browser.init({
         server: site.buildRoot,
         port:   site.port
     });
     done();
 }
+
+function serverForApp(done) {
+    console.trace('init browserSync');
+    browser.init({
+        server: site.buildRoot,
+        ui:     false,
+        open:   false
+    });
+    done();
+}
+
 
 // Xóa ${buildRoot} (metalsmith tự động xóa)
 // build metalsmith, sass, javascript, image
@@ -186,3 +212,4 @@ function watch() {
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default', gulp.series('build', server, watch));
+gulp.task('app-watch', gulp.series('build', serverForApp, watch));
