@@ -24,11 +24,11 @@
 
         <div class="article--column_2">
           <div class="article--position">BÁC SĨ</div>
-          <div class="article--title">Nguyễn Văn An </div>
-          <div class="article-service">Chuyên khoa tai mũi họng</div>
+          <div class="article--title">{{title}}</div>
+          <div class="article-service">Chuyên khoa {{#each info.chuyen-khoa}} {{#if @first}} {{this}} {{else}} {{this}} {{/if}} {{/each}}</div>
 
 
-          <div class="paragraph">After graduating from West Virginia University Medical School, Dr. Jonathon Alex completed a two-year fellowship in sports medicine at Akron Children’s Hospital. During his training at Akron, Dr. Jonathon Alex was team physician for the University of Akron and Walsh University.</div>
+          <div class="paragraph">{{description}}</div>
 
         </div>
 
@@ -74,21 +74,25 @@
 
           <h5 class="listIcon"><i class="fa fa-medkit"></i> Chuyên khoa</h5>
           <ul class="listCircle ml-5">
-            <li>Tai mũi họng</li>
-            <li>Đa khoa</li>
+           {{#each info.chuyen-khoa}}
+           	<li>{{this}}</li>
+           {{/each}}
           </ul>
 
 
-          <h5 class="listIcon"><i class="fa fa-trophy"></i> Giải thưởng</h5>
+          <h5 class="listIcon"><i class="fa fa-trophy"></i> Giải thưởng Quốc Gia</h5>
           <ul class="listCircle ml-5">
-            <li>Phòng khám được yêu thích nhất năm 2015</li>
+          	{{#each info.giai-thuong}}
+           	<li>{{this}}</li>
+           {{/each}}
           </ul>
 
 
           <h5 class="listIcon"><i class="fa fa-list-alt"></i> Giấy phép</h5>
           <ul class="listCircle ml-5">
-            <li>Số giấy phép : 00001/SYT-GPHĐ <br>Ngày cấp : 27-08-2012</li>
-            <li>Phạm vi hoạt động: Phòng khám đa khoa</li>
+              {{#each info.giay-phep}}
+                <li>{{{this}}}</li>
+               {{/each}}
           </ul>
       </div>
     </div>
@@ -107,41 +111,9 @@
       <div class="porlet--body" >
 
             <ul class="listCircle col3" id="chuyendieutri" data-toggler="show">
-              <li>Viêm họng</li>
-              <li> Viêm mũi dị ứng</li>
-              <li>Viêm xoang</li>
-              <li> Viêm họng mãn tính</li>
-              <li>Viêm phổi</li>
-
-              <li>Viêm họng</li>
-              <li> Viêm mũi dị ứng</li>
-              <li>Viêm xoang</li>
-              <li> Viêm họng mãn tính</li>
-              <li>Viêm phổi</li>
-
-              <li>Viêm họng</li>
-              <li> Viêm mũi dị ứng</li>
-              <li>Viêm xoang</li>
-              <li> Viêm họng mãn tính</li>
-              <li>Viêm phổi</li>
-
-              <li>Viêm họng</li>
-              <li> Viêm mũi dị ứng</li>
-              <li>Viêm xoang</li>
-              <li> Viêm họng mãn tính</li>
-              <li>Viêm phổi</li>
-
-              <li>Viêm họng</li>
-              <li> Viêm mũi dị ứng</li>
-              <li>Viêm xoang</li>
-              <li> Viêm họng mãn tính</li>
-              <li>Viêm phổi</li>
-
-              <li>Viêm họng</li>
-              <li> Viêm mũi dị ứng</li>
-              <li>Viêm xoang</li>
-              <li> Viêm họng mãn tính</li>
-              <li>Viêm phổi</li>
+           {{#each chuyen-dieu-tri}}
+           	<li>{{this}}</li>
+           {{/each}}
             </ul>
         <div class="porlet-loadmore">
           <a data-toggle="chuyendieutri" class="linkGray">Xem thêm &raquo;</a>
